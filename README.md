@@ -26,5 +26,23 @@ indicator for vulnerable component found in /path/to/vuln/log4shell-vulnerable-a
 indicator for vulnerable component found in /path/to/vuln/log4shell-vulnerable-app-0.0.1-SNAPSHOT.war::WEB-INF/lib/log4j-core-2.14.1.jar (org/apache/logging/log4j/core/net/JndiManager.class): log4j 2.14.0-2.14.1
 
 Scan finished
-```
 
+```
+# Building from source
+
+Install a [Go compiler](https://golang.org/dl).
+
+Run the following commands in the checked-out repository:
+```
+go build -o local-log4j-vuln-scanner ./scanner
+go build -o local-log4j-vuln-patcher ./patcher
+```
+(Add the appropriate `.exe` extension on Windows systems, of course.)
+
+# License
+
+GNU General Public License, version 3
+
+# Author
+
+Hilko Bengen <<bengen@hilluzination.de>>
